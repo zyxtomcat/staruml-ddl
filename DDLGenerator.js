@@ -128,6 +128,11 @@ define(function (require, exports, module) {
         if (elem.primaryKey || !elem.nullable) {
             line += " NOT NULL";
         }
+
+        if (elem.documentation) {
+            line += " COMMENT '" + elem.documentation + "'"
+        }
+
         return line;
     };
 
