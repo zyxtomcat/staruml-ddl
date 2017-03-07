@@ -129,7 +129,7 @@ define(function (require, exports, module) {
             line += " NOT NULL";
         }
 
-        if (elem.autoIncrement && elem.autoIncrement == 1) {
+        if (elem.autoIncrement) {
             line += " AUTO_INCREMENT"
         }
 
