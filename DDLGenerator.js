@@ -129,6 +129,10 @@ define(function (require, exports, module) {
             line += " NOT NULL";
         }
 
+        if (elem.autoIncrement && elem.autoIncrement == 1) {
+            line += " AUTO_INCREMENT"
+        }
+
         if (elem.documentation) {
             line += " COMMENT '" + elem.documentation + "'"
         }
@@ -244,7 +248,7 @@ define(function (require, exports, module) {
         }
 
         codeWriter.outdent();
-        codeWriter.writeLine(");");
+        codeWriter.writeLine(") ENGINE=InnoDB DEFAULT CHARSET=utf8;");
         codeWriter.writeLine();
     };
 
