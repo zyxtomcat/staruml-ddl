@@ -72,6 +72,16 @@ define(function (require, exports, module) {
             description: "Number of spaces for indentation.",
             type: "Number",
             default: 4
+        },
+        "ddl.gen.setcharset": {
+            text: "Charset",
+            description: "Select a charset",
+            type: "Dropdown",
+            options: [
+                { value: "utf8",  text: "utf8" },
+                { value: "gbk", text: "gbk" }
+            ],
+            default: "utf8"
         }
     };
 

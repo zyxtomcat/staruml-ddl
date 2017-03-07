@@ -272,6 +272,7 @@ define(function (require, exports, module) {
             // Drop Tables
             if (options.dropTable) {
                 if (options.dbms === "mysql") {
+                    codeWriter.writeLine("SET NAMES " + ddl.gen.setcharset + ";")
                     codeWriter.writeLine("SET FOREIGN_KEY_CHECKS = 0;");
                 }
                 elem.ownedElements.forEach(function (e) {
