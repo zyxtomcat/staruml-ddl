@@ -73,7 +73,7 @@ define(function (require, exports, module) {
             type: "Number",
             default: 4
         },
-        "ddl.gen.setcharset": {
+        "ddl.gen.charset": {
             text: "Charset",
             description: "Select a charset",
             type: "Dropdown",
@@ -96,7 +96,8 @@ define(function (require, exports, module) {
             dropTable        : PreferenceManager.get("ddl.gen.dropTable"),
             dbms             : PreferenceManager.get("ddl.gen.dbms"),
             useTab           : PreferenceManager.get("ddl.gen.useTab"),
-            indentSpaces     : PreferenceManager.get("ddl.gen.indentSpaces")
+            indentSpaces     : PreferenceManager.get("ddl.gen.indentSpaces"),
+            charset          : PreferenceManager.get("ddl.gen.charset")
         };
     }
 
